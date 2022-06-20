@@ -33,38 +33,10 @@ namespace Avro.Test
     [TestFixture]
     class TestReflect
     {
-
-        
-
-        public class DictionaryTestClass //: ISpecificRecord
+        public class DictionaryTestClass
         {
             public Dictionary<int, int> p { get; set; }
             public NestedTestClass ntc { get; set; }
-
-            //public Schema Schema => throw new NotImplementedException();
-
-            //public object Get(int fieldPos)
-            //{
-            //    switch (fieldPos)
-            //    {
-            //    case 0:
-            //            return p;
-            //    default:
-            //            throw new AvroRuntimeException("Bad index " + fieldPos + " in Get()");
-            //    }
-            //}
-            //public void Put(int fieldPos, object fieldValue)
-            //{
-            //    switch (fieldPos)
-            //    {
-            //        case 0:
-            //            var fv = (Dictionary<string, int>)fieldValue;
-            //            p = fv.ToDictionary(x => int.Parse(x.Key), x => x.Value);
-            //            break;
-            //        default:
-            //            throw new AvroRuntimeException("Bad index " + fieldPos + " in Put()");
-            //    }
-            //}
 
 
             public class NestedTestClass
