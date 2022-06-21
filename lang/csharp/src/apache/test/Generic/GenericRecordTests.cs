@@ -15,9 +15,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-//https://github.com/apache/avro/tree/master/lang/csharp
-//https://www.geeksforgeeks.org/iterative-depth-first-traversal/
-//http://avro.tarantool.org/#
 using System;
 using System.Collections.Generic;
 using Avro.Generic;
