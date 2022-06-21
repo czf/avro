@@ -259,9 +259,11 @@ namespace Avro.Reflect
                         throw new AvroException($"Cant map non-generic type {objType.Name} to map {ms.Name}");
                     }
 
-                    if(!objType.IsInstanceOfType(typeof(IDictionary))
+                    var genericTypeDef = objType.GetGenericTypeDefinition();
+                    if (!objType.IsInstanceOfType(typeof(IDictionary))
                         && objType.IsGenericType
-                        && objType.GetGenericTypeDefinition() != typeof(IDictionary<,>))
+                        && genericTypeDef != typeof(Dictionary<,>)
+                        && genericTypeDef != typeof(IDictionary<,>))
                     {
                         throw new AvroException($"Cant map type {objType.Name} to map {ms.Name}");
                     }
